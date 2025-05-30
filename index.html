@@ -2,114 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DOGSOB Token</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOGSOB</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-image: url('https://bafybeidasvvki26cw2x33uyxjx76sewgfikzpsqjaxid2uigtbnhiqf6ne.ipfs.w3s.link/IMG_3116.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-attachment: fixed;
+      background-color: #000; /* fallback color */
       color: white;
-      background: 
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url('https://bafybeidasvvki26cw2x33uyxjx76sewgfikzpsqjaxid2uigtbnhiqf6ne.ipfs.w3s.link/IMG_3116.jpg') no-repeat center center fixed;
-      background-size: cover;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       text-align: center;
-      padding: 20px;
     }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.2em;
-      text-shadow: 2px 2px 5px #000;
-    }
-    section {
-      max-width: 420px;
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      max-width: 500px;
       margin: 0 auto;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 30px 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      padding: 40px 20px;
+      border-radius: 20px;
+      margin-top: 10vh;
     }
-    section img {
+
+    .logo {
       width: 150px;
       height: 150px;
-      border-radius: 50%;
-      margin-bottom: 1em;
-      border: 3px solid #ff5722;
+      border-radius: 20px;
+      margin-bottom: 20px;
     }
-    section h2 {
+
+    h1 {
+      margin-bottom: 10px;
       font-size: 2.5rem;
-      margin-bottom: 0.3em;
     }
-    section p {
-      font-size: 1.2rem;
-      margin: 0.4em 0;
-    }
-    .button-group {
+
+    .buttons {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
-    a.token-button {
-      display: block;
-      background-color: #ff5722;
+
+    a.button {
+      display: inline-block;
+      background-color: #ff9900;
       color: white;
       text-decoration: none;
-      padding: 16px;
-      font-size: 1.2rem;
-      border-radius: 10px;
       font-weight: bold;
-      box-shadow: 0 4px 12px rgba(255, 87, 34, 0.5);
-      transition: background-color 0.3s ease;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      transition: background-color 0.2s ease;
     }
-    a.token-button:hover {
-      background-color: #e64a19;
+
+    a.button:hover {
+      background-color: #e68100;
     }
-    footer {
-      margin-top: 2em;
-      font-size: 1rem;
-      color: #ddd;
-    }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
+
+    @media (min-width: 600px) {
+      .buttons {
+        flex-direction: row;
+        justify-content: space-around;
       }
-      section {
-        padding: 20px 15px;
-      }
-      section h2 {
-        font-size: 1.8rem;
-      }
-      a.token-button {
-        font-size: 1.1rem;
-        padding: 14px;
+
+      a.button {
+        width: 30%;
       }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>DOGSOB Token</h1>
-</header>
-
-<section>
-  <img src="https://bafybeianmgy6m7dlanxvc6mpozyrojrxu7pcallkrrnpug6teczn4fsbye.ipfs.w3s.link/dogsob512.png" alt="DOGSOB Logo" />
-  <h2>DOGSOB</h2>
-  <p><strong>Symbol:</strong> DOGSOB</p>
-  <p><strong>Description:</strong> A community-driven meme token on the Solana blockchain.</p>
-  
-  <div class="button-group">
-    <a class="token-button" href="https://jup.ag/swap?inputMint=So11111111111111111111111111111111111111112&outputMint=mntSXDiCBkLTUCcEQZvcQZiVP4eoWYfmdJuJBGo8pVo" target="_blank">Buy DOGSOB</a>
-    <a class="token-button" href="https://solscan.io/token/mntSXDiCBkLTUCcEQZvcQZiVP4eoWYfmdJuJBGo8pVo" target="_blank">View on Solscan</a>
-    <a class="token-button" href="https://x.com/dogsob48690" target="_blank">Follow on Twitter</a>
-    <a class="token-button" href="https://dexscreener.com/solana/REPLACE_WITH_REAL_LINK" target="_blank">View on Dexscreener</a>
+  <div class="container">
+    <img src="https://bafybeianmgy6m7dlanxvc6mpozyrojrxu7pcallkrrnpug6teczn4fsbye.ipfs.w3s.link/dogsob512.png" alt="DOGSOB Logo" class="logo" />
+    <h1>DOGSOB</h1>
+    <p>The saddest dog on Solana. $DOGSOB</p>
+    
+    <div class="buttons">
+      <a class="button" href="https://jup.ag/swap?inputMint=So11111111111111111111111111111111111111112&outputMint=mntSXDiCBkLTUCcEQZvcQZiVP4eoWYfmdJuJBGo8pVo" target="_blank">Buy DOGSOB</a>
+      <a class="button" href="https://solscan.io/token/mntSXDiCBkLTUCcEQZvcQZiVP4eoWYfmdJuJBGo8pVo" target="_blank">View on Solscan</a>
+      <a class="button" href="https://dexscreener.com/solana/YOURPOOLADDRESS" target="_blank">Dexscreener</a>
+      <a class="button" href="https://x.com/dogsob48690" target="_blank">Twitter</a>
+    </div>
   </div>
-</section>
-
 </body>
 </html>
