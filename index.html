@@ -8,23 +8,20 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('https://bafybeidasvvki26cw2x33uyxjx76sewgfikzpsqjaxid2uigtbnhiqf6ne.ipfs.w3s.link/IMG_3116.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center top;
-      background-attachment: fixed;
-      background-color: #000; /* fallback color */
-      color: white;
+      background-color: #ffffff;
+      color: #111;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.7);
-      max-width: 500px;
-      margin: 0 auto;
       padding: 40px 20px;
       border-radius: 20px;
-      margin-top: 10vh;
+      max-width: 500px;
+      width: 90%;
     }
 
     .logo {
@@ -39,15 +36,20 @@
       font-size: 2.5rem;
     }
 
+    .tagline {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
     .buttons {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      margin-top: 30px;
     }
 
     a.button {
-      display: inline-block;
       background-color: #ff9900;
       color: white;
       text-decoration: none;
@@ -65,11 +67,12 @@
     @media (min-width: 600px) {
       .buttons {
         flex-direction: row;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       a.button {
-        width: 30%;
+        width: 45%;
       }
     }
   </style>
@@ -78,7 +81,7 @@
   <div class="container">
     <img src="https://bafybeianmgy6m7dlanxvc6mpozyrojrxu7pcallkrrnpug6teczn4fsbye.ipfs.w3s.link/dogsob512.png" alt="DOGSOB Logo" class="logo" />
     <h1>DOGSOB</h1>
-    <p>The saddest dog on Solana. $DOGSOB</p>
+    <p class="tagline">Sigma dog.</p>
     
     <div class="buttons">
       <a class="button" href="https://jup.ag/swap?inputMint=So11111111111111111111111111111111111111112&outputMint=mntSXDiCBkLTUCcEQZvcQZiVP4eoWYfmdJuJBGo8pVo" target="_blank">Buy DOGSOB</a>
