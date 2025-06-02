@@ -97,6 +97,12 @@
         width: 45%;
       }
     }
+
+    #livePrice {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
   </style>
 </head>
 <body>
@@ -112,6 +118,34 @@
       <a class="button" href="https://www.geckoterminal.com/solana/pools/5pbXkSaqp58kesRWqwfaTQU3CDZGXs9sGB6Cwu3B1nXa" target="_blank">GeckoTerminal</a>
       <a class="button" href="https://x.com/dogsob48690" target="_blank">Twitter</a>
     </div>
+
+    <div id="livePrice">Loading DOGSOB price...</div>
+
   </div>
+
+  <script>
+    const tokenAddress = 'mntSXDiCBkLTUCcEQZvcQZiVP4eoWYfmdJuJBGo8pVo';
+
+    async function fetchPrice() {
+      const priceEl = document.getElementById('livePrice');
+      try {
+        const res = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${tokenAddress}`);
+        if (!res.ok) throw new Error('Failed to fetch price');
+        const data = await res.json();
+        const price = data.pairs && data.pairs[0] && data.pairs[0].priceUsd;
+        if (price) {
+          priceEl.textContent = `DOGSOB Price: $${parseFloat(price).toFixed(8)}`;
+        } else {
+          priceEl.textContent = 'Price not available';
+        }
+      } catch (err) {
+        priceEl.textContent = 'Error loading price';
+        console.error(err);
+      }
+    }
+
+    fetchPrice();
+    setInterval(fetchPrice, 60000); // Refresh price every 60 seconds
+  </script>
 </body>
 </html>
